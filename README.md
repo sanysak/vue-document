@@ -82,7 +82,7 @@ export const DEFAULT_DEPENDENCIES = {
 export const createStore = function(libraries) {
   
   // DI2: MERGE ADDITIONAL DEPS INTO THE DEFAULT ONES, USEFUL IN TESTS
-  libraries = { ...DEFAULT_DEPENDENCIES, ...libraries };
+  libraries = { DEFAULT_DEPENDENCIES, libraries };
 
   return new Vuex.Store({
     state: {
